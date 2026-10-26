@@ -9,6 +9,14 @@ def add_task(task_name):
     })
     print(f"Đã thêm công việc: '{task_name}'")
 
+# Hàm xóa công việc
+def delete_task(task_index):
+    if 0 <= task_index < len(tasks):
+        deleted_task = tasks.pop(task_index)
+
+        print(f"Đã xóa công việc: '{deleted_task['name']}'")
+    else:
+        print("Chỉ số công việc không hợp lệ!")
 def list_tasks():
     print("\nDANH SÁCH CÔNG VIỆC:")
 
